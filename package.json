@@ -1,0 +1,88 @@
+{
+  "name": "vue-modal",
+  "version": "0.0.0",
+  "description": "Accessible modal dialog component for Vue.js",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/vue-modal.umd.js",
+  "module": "./dist/vue-modal.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-modal.js",
+      "require": "./dist/vue-modal.umd.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uidev1116/vue-modal"
+  },
+  "author": "uidev1116",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run build:js && npm run build:css",
+    "build:js": "tsc && vite build",
+    "build:scss": "sass --no-source-map --style=compressed scss/modal.scss:css/vue-modal.css",
+    "build:postcss": "postcss css/*.css -r",
+    "build:css": "npm run build:scss && npm run build:postcss",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "aria-hidden": "^1.2.2",
+    "body-scroll-lock": "^3.1.5",
+    "focus-trap": "^7.3.1"
+  },
+  "devDependencies": {
+    "@types/body-scroll-lock": "^3.1.0",
+    "@types/node": "^18.14.0",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.52.0",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "autoprefixer": "^10.4.13",
+    "eslint": "^8.34.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-import-resolver-typescript": "^3.5.3",
+    "eslint-plugin-vue": "^9.9.0",
+    "eslint-plugin-vuejs-accessibility": "^2.1.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
+    "prettier": "^2.8.4",
+    "sass": "^1.58.3",
+    "stylelint": "^15.1.0",
+    "stylelint-config-recess-order": "^4.0.0",
+    "stylelint-config-recommended-scss": "^9.0.1",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-plugin-stylelint": "^4.2.0",
+    "vue": "^3.2.47",
+    "vue-eslint-parser": "^9.1.0",
+    "vue-tsc": "^1.0.24"
+  },
+  "peerDependencies": {
+    "vue": "^3"
+  },
+  "volta": {
+    "node": "18.14.1",
+    "npm": "9.5.0"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": "prettier --write"
+  },
+  "tags": [
+    "vue",
+    "modal",
+    "dialog"
+  ],
+  "keywords": [
+    "vue",
+    "vue-component",
+    "modal",
+    "dialog"
+  ]
+}
