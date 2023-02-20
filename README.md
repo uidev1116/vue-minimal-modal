@@ -1,4 +1,4 @@
-# vue-modal
+# Vuedal
 
 Accessible modal dialog component for Vue.js
 
@@ -9,24 +9,24 @@ To install, you can use [npm](https://npmjs.org/) or [yarn](https://yarnpkg.com)
 
 #### via npm
 ```sh
-npm install vue-modal
+npm install vuedal
 ```
 
 #### via yarn
 ```sh
-yarn add vue-modal
+yarn add vuedal
 ```
 
 ## API documentation
 
 ### Examples
 
-Here is a simple example of vue-modal.
+Here is a simple example of vuedal.
 
 ```vue
 <script setup lang="ts">
 import { ref } from 'vue'
-import Modal from 'vue-modal'
+import Modal from 'vuedal'
 
 const isOpen = ref(false)
 
@@ -71,9 +71,9 @@ const closeModal = () => {
 | shouldCloseOnBackdropClick | Boolean indicating if the backdrop should close the modal. | boolean | true |
 | shouldCloseOnEsc | Boolean indicating if pressing the esc key should close the modal. | boolean | true |
 | id | Id attribute to be applied to the modal div. | string | |
-| className | Class attribute to be applied to the modal div. | string | 'vue-modal' |
-| backdropClassName | Class attribute to be applied to the backdrop div. | string | 'vue-modal-backdrop' |
-| dialogClassName | Class attribute to be applied to the dialog div. | string | 'vue-modal-dialog' |
+| className | Class attribute to be applied to the modal div. | string | 'vuedal' |
+| backdropClassName | Class attribute to be applied to the backdrop div. | string | 'vuedal-backdrop' |
+| dialogClassName | Class attribute to be applied to the dialog div. | string | 'vuedal-dialog' |
 | preventScroll | Boolean indicating if open, prevent scrolling. | boolean | true |
 | closeTimeout | Number indicating the milliseconds to wait before closing the modal. | number | 0 |
 | role | Role attribute of the modal. | string | 'dialog' |

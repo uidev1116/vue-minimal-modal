@@ -9,8 +9,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
-      name: 'VueModal',
-      fileName: 'vue-modal',
+      name: 'Vuedal',
+      fileName: 'vuedal',
     },
     rollupOptions: {
       external: ['vue'],
