@@ -56,7 +56,7 @@ const closeModal = () => {
       :onClose="closeModal"
     >
       <button type="button" @click="closeModal">Close Modal</button>
-      <h2>I am Vue Modal.</h2>
+      <h2>I am Vuedal.</h2>
     </Modal>
   </div>
 </template>
