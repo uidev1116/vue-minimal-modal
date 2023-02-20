@@ -84,7 +84,7 @@ watch(
           emit('afterOpen')
         }
       })
-    } else {
+    } else if (isMounted) {
       if (props.preventScroll) {
         enableScroll()
       }
@@ -134,21 +134,18 @@ watch(
   }
 )
 
+const classNames = computed(() => ({
+  [props.className]: props.className,
+  [`${props.className}--after-open`]: state.afterOpen,
+  [`${props.className}--before-close`]: state.beforeClose,
+}))
+
 const shouldBeClosed = computed(() => !state.isOpen && !state.beforeClose)
 </script>
 
 <template>
   <teleport :to="container">
-    <div
-      v-if="!shouldBeClosed"
-      :id="id"
-      ref="modalRef"
-      :class="{
-        [className]: className,
-        [`${className}--after-open`]: state.afterOpen,
-        [`${className}--before-close`]: state.beforeClose,
-      }"
-    >
+    <div v-if="!shouldBeClosed" :id="id" ref="modalRef" :class="classNames">
       <!-- eslint-disable-next-line vuejs-accessibility/click-events-have-key-events vuejs-accessibility/no-static-element-interactions -->
       <div
         :class="backdropClassName"
