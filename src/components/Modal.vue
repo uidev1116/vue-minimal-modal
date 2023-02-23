@@ -65,13 +65,17 @@ const state = reactive({
   afterOpen: false,
 })
 
-watch(toRefs(props).isOpen, (isOpen) => {
-  if (isOpen) {
-    state.isOpen = true
-  } else if (isMounted) {
-    state.beforeClose = true
-  }
-})
+watch(
+  toRefs(props).isOpen,
+  (isOpen) => {
+    if (isOpen) {
+      state.isOpen = true
+    } else if (isMounted.value) {
+      state.beforeClose = true
+    }
+  },
+  { immediate: true }
+)
 
 watch(
   () => state.isOpen,
@@ -84,7 +88,7 @@ watch(
           emit('afterOpen')
         }
       })
-    } else if (isMounted) {
+    } else if (isMounted.value) {
       if (props.preventScroll) {
         enableScroll()
       }
@@ -97,7 +101,8 @@ watch(
         cancelAnimationFrame(animationFrame)
       }
     })
-  }
+  },
+  { immediate: true }
 )
 
 watch(
@@ -118,7 +123,8 @@ watch(
         clearTimeout(timeoutId)
       }
     })
-  }
+  },
+  { immediate: true }
 )
 
 watch(
@@ -131,7 +137,8 @@ watch(
       activate()
       hide()
     }
-  }
+  },
+  { immediate: true }
 )
 
 const classNames = computed(() => ({
