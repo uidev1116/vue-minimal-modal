@@ -1,6 +1,6 @@
 {
   "name": "vue-minimal-modal",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Accessible modal dialog component for Vue.js",
   "type": "module",
   "files": [
