@@ -7,10 +7,12 @@ import {
   useMounted,
 } from '../composables'
 
+import type { TeleportProps } from 'vue'
+
 export interface ModalProps {
   isOpen: boolean
   onClose: () => void
-  container?: string | HTMLElement
+  container?: TeleportProps['to']
   shouldCloseOnBackdropClick?: boolean
   shouldCloseOnEsc?: boolean
   id?: string

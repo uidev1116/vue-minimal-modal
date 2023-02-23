@@ -27,6 +27,8 @@ const handleAfterClose = () => {
 }
 </script>
 
+<style src="../../css/vuedal.css"></style>
+
 <template>
   <div>
     <button type="button" @click="openModal">Open Modal</button>
