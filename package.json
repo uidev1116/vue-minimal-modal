@@ -5,6 +5,8 @@
   "type": "module",
   "files": [
     "dist",
+    "css",
+    "scss",
     "types"
   ],
   "main": "./dist/vue-minimal-modal.umd.js",
