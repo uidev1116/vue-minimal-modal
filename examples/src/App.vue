@@ -27,7 +27,7 @@ const handleAfterClose = () => {
 }
 </script>
 
-<style src="../../css/vuedal.css"></style>
+<style src="../../css/vue-minimal-modal.css"></style>
 
 <template>
   <div>

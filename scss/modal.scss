@@ -1,8 +1,8 @@
-.vuedal {
+.vue-minimal-modal {
   opacity: 1;
 }
 
-.vuedal-backdrop {
+.vue-minimal-modal-backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -17,7 +17,7 @@
   height: 100%;
 }
 
-.vuedal-dialog {
+.vue-minimal-modal-dialog {
   border: 1px solid #ccc;
   padding: 40px;
   background-color: #fff;
