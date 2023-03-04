@@ -16,7 +16,9 @@
     ".": {
       "import": "./dist/vue-minimal-modal.js",
       "require": "./dist/vue-minimal-modal.umd.js"
-    }
+    },
+    "./css": "./css/vue-minimal-modal.css",
+    "./scss": "./scss/vue-minimal-modal.scss"
   },
   "repository": {
     "type": "git",
@@ -28,7 +30,7 @@
     "dev": "vite",
     "build": "npm run build:js && npm run build:css",
     "build:js": "vue-tsc && vite build",
-    "build:scss": "sass --no-source-map --style=compressed scss/modal.scss:css/vue-minimal-modal.css",
+    "build:scss": "sass --no-source-map --style=compressed scss/vue-minimal-modal.scss:css/vue-minimal-modal.css",
     "build:postcss": "postcss css/*.css -r",
     "build:css": "npm run build:scss && npm run build:postcss",
     "prepare": "husky install"

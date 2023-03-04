@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import VueModal from '../../src'
+import VueModal from '../../dist/vue-minimal-modal'
 
 const isOpen = ref(false)
 
@@ -27,7 +27,7 @@ const handleAfterClose = () => {
 }
 </script>
 
-<style src="../../css/vue-minimal-modal.css"></style>
+<style src="/css/vue-minimal-modal.css"></style>
 
 <template>
   <div>

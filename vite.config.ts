@@ -16,7 +16,7 @@ export default defineConfig({
       external: ['vue'],
       output: {
         globals: {
-          react: 'Vue',
+          vue: 'Vue',
         },
       },
     },
