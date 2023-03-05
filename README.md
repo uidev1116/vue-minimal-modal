@@ -25,13 +25,14 @@ yarn add vue-minimal-modal
 Here is a simple example of vue-minimal-modal.
 
 ```vue
-<script setup lang="ts">
+<script setup lang="js">
 import { ref } from 'vue'
 import Modal from 'vue-minimal-modal'
+import 'vue-minimal-modal/css'; // if necessary
 
 const isOpen = ref(false)
 
-const setIsOpen = (value: boolean) => {
+const setIsOpen = (value) => {
   isOpen.value = value
 }
 
@@ -43,9 +44,6 @@ const closeModal = () => {
   setIsOpen(false)
 }
 </script>
-
-<!-- if necessary -->
-<style src="vue-mininal-modal/css/vue-minimal-modal.css"></style>
 
 <template>
   <div>
