@@ -33,6 +33,10 @@
     "build:scss": "sass --no-source-map --style=compressed scss/vue-minimal-modal.scss:css/vue-minimal-modal.css",
     "build:postcss": "postcss css/*.css -r",
     "build:css": "npm run build:scss && npm run build:postcss",
+    "release:commit": "node ./scripts/commit.js",
+    "release:patch": "npm version patch --no-git-tag-version && npm run release:commit",
+    "release:minor": "npm version minor --no-git-tag-version && npm run release:commit",
+    "release:major": "npm version mejor --no-git-tag-version && npm run release:commit",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -47,6 +51,7 @@
     "@typescript-eslint/parser": "^5.52.0",
     "@vitejs/plugin-vue": "^4.0.0",
     "autoprefixer": "^10.4.13",
+    "co": "^4.6.0",
     "eslint": "^8.34.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.6.0",
@@ -55,6 +60,7 @@
     "eslint-plugin-vuejs-accessibility": "^2.1.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.2",
+    "node-cmd": "^5.0.0",
     "postcss": "^8.4.21",
     "postcss-cli": "^10.1.0",
     "prettier": "^2.8.4",
