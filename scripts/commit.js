@@ -1,17 +1,17 @@
 'use strict'
 
-const { systemCmd } = require('./lib/system.js')
+import { systemCmd } from './lib/system.js'
 
-const co = require('co')
+import co from 'co'
 
 // package.json
-const { version } = require('../package.json')
+import pkg from '../package.json' assert { type: 'json' }
 
 co(function* () {
   try {
     yield systemCmd('git add -A')
-    yield systemCmd(`git commit -m "v${version}"`)
-    yield systemCmd(`git tag v${version}`)
+    yield systemCmd(`git commit -m "v${pkg.version}"`)
+    yield systemCmd(`git tag v${pkg.version}`)
     yield systemCmd('git push')
     yield systemCmd('git push --tags')
   } catch (err) {

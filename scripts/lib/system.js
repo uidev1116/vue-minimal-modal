@@ -1,4 +1,4 @@
-const cmd = require('node-cmd');
+import cmd from 'node-cmd'
 
 /**
  * Run system command
@@ -6,9 +6,9 @@ const cmd = require('node-cmd');
  * @param cmdString
  * @returns {Promise}
  */
-exports.systemCmd = cmdString =>
+const systemCmd = cmdString =>
   new Promise((resolve) => {
-    cmd.get(
+    cmd.run(
       cmdString,
       (data, err, stderr) => {
         console.log(cmdString);
@@ -23,3 +23,7 @@ exports.systemCmd = cmdString =>
       }
     );
   });
+
+export {
+  systemCmd
+}
